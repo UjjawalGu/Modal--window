@@ -1,87 +1,79 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.body{
-    background : linear-gradient(to right bottom, rgb(30, 228, 145), rgb(66, 23, 219));
-    height: 100vh;
-    width: 100vw;
+body{
+    background: linear-gradient(to right bottom, rgb(92, 92, 212) 0%, rgb(53, 223, 138) );
+    height: 100vh; 
+    width: 100%;
+    
     background-repeat: no-repeat;
     background-size: cover;
 }
-.primary-heading{
-    color: rgb(250, 250, 250);
-    font-size: 70px;
-    position: absolute;
-    top: 25%;
-    left: 25%;
+.btn{
+    padding: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 80px;
+    border: 2px solid #fff;
+    margin: 20px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 2rem;
+    position: relative;
+    top: 50%;
+    left: 22%;
+    transform: translate(-50%);
     
-    border: 3px solid rgb(68, 18, 126);
-    border-radius: 60px;
-    padding: 15px;
 }
-.secret{
-    font-size: 150px;
-    color: aliceblue;
+.modal{
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 35%;
     position: absolute;
-    top: 3%;
-    left: 45%;
-    border: 1.5px solid #fff;
-    padding: 5px;
-    padding-left: 25px;
-    padding-right: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    z-index: 10;
+    flex-direction: column;
+    
+    
+    
 }
 .heading{
-    position: relative;
-    top: 40vh;
-    left: 15vw;
-    border: 1.5px solid white;
-    border-radius: 5px;
-    color: rgb(37, 10, 156);
-    font-size: 25px;
-    display: inline-block;
-    padding: 5px;
+    padding-bottom: 30px;
+    text-align: center;
+    
+    
+    
 }
-.guess{
-position: relative;
-top: 47vh;
-left: 15vw;
-height: 30px;
-width: 200px;
-border-radius: 30px;
-border: 2px solid rgb(40, 6, 102);
-padding: 5px;
-}
-.Submit{
-    position: absolute;
-    top : 50.5vh;
-    left : 18vw;
-    height: 25px;
-    width: 80px;
-    padding: 5px;
-    border: 1px solid transparent;
-    background-color: rgb(93, 83, 236);
-    border-radius: 20px;
-    color: aliceblue;
-    font-weight: bold;
-    cursor: pointer;
+.text{
+    text-align: center;
+    font-size: larger;
+    padding: 30px;
 
+    
+    
 }
 
-.right{
-    color: #fff;
-    font-size: 30px;
-    position: relative;
-    top: 41vh;
-    left: 75vw;
-}
-.score{
-position: absolute;
-top: 40%;
-    left: 8%;
-}
-.high-score{
-    position: absolute;
-    top: 71%;
-    left: 15%;
-}
+.overlay{
+  backdrop-filter: blur(8px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+
+ 
+  background-size: cover;
+
+} .hidden{  
+     display: none; 
+ }  
