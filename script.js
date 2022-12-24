@@ -1,37 +1,24 @@
-'use strict';
-let secret = Math.trunc(Math.random()*20)+1;
-let score = 20;
-//document.querySelector('.secret').textContent=secret;
+'use strict'
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close');
+const btnsOpenModal = document.querySelectorAll('.btn');
 
-document.querySelector('.Submit').addEventListener('click', function(){
-   const guess = Number(document.querySelector('.guess').value);
+const openmodal = function () {
+    overlay.classList.remove('hidden');
+    modal.classList.remove('hidden');
+};
+const closemodal = function (){
+    overlay.classList.add('hidden');
+    modal.classList.add('hidden');
+}
 
-    console.log(guess ,typeof guess);
-
-    if(!guess){
-        document.querySelector('.value').textContent= 'No number';
-    }
-    else if(guess===secret){
-        document.querySelector('.value').textContent= 'Correct Number';
-        document.querySelector('.secret').textContent=secret;
-        document.querySelector('.high-score').textContent=score;
-        
-
-    }
-    else if(guess>secret){
-        document.querySelector('.value').textContent= 'Too High!';
-score--;
-document.querySelector('.score').textContent=score;
-    }
-    else if(guess<secret){
-        document.querySelector('.value').textContent= 'Too low!';
-    score--;
-    document.querySelector('.score').textContent= score;
-    }
-     
-});
-
-console.log("secret"); 
+for (let i = 0; i < btnsOpenModal.length; i++)
+    btnsOpenModal[i].addEventListener('click', openmodal);
 
 
+btnCloseModal.addEventListener('click', closemodal);
+overlay.addEventListener('click', closemodal);
 
+
+console.log(window);
